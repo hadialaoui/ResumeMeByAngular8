@@ -1,0 +1,15 @@
+<div class="container-certif">
+    <h2>Licences and Certifications</h2>
+    <div *ngFor="let certification of certifications">
+        <ul>
+            <li>
+                {{ certification.name }}
+                <button (click)="showDetail(certification.id)">Details</button>
+                <app-alert-certif style="display: inline-block; margin-left: 15px;" [certification]="certification" (notify)="onNotify()"></app-alert-certif>
+                <app-detail-certif   [certification]="certification" *ngIf ="showElement == certification.id"></app-detail-certif>
+               
+                
+            </li>
+        </ul>
+    </div>
+</div>

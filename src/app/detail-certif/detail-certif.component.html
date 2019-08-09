@@ -1,0 +1,8 @@
+<div id="{{ certification.id }}">
+        <ul>
+            <li>{{ certification.issuingOrganization }}</li>
+            <li>{{ certification.issueDate }}</li>
+            <li *ngIf="certification.credentialID != ''">{{ certification.credentialID }}</li>
+            <li *ngIf="certification.credentialURL != ''">{{ certification.credentialURL }}</li>
+        </ul>
+</div>
